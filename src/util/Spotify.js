@@ -1,8 +1,13 @@
-import 'dotenv/config'
+/*
+    NOTE
+        Spotify API is free of charge. The purpose of this project is to create a React app which consume data from a 3rd party API.
+        However, it's not safe to keep secret variables in React, since it's build which all values, I've had my secret here only for a portfolio purpose.
+        I don't know how to keep information safe without a backend, so, for this project, I'm aware that this is not safe and much less a software pattern
+*/
 
 let accessToken;
-const clientId = process.env.ID;
-const redirectUri = process.env.REDIRECT;
+const clientId = '778c030e11cb46bd883d6aa5ab468a09'
+const redirectUri = 'http://localhost:3000/';
 
 const Spotify = {
 
@@ -10,6 +15,7 @@ const Spotify = {
         if (accessToken) {
             return accessToken;
         }
+        console.log(process.env.REACT_APP_ID);
 
         const accessTokenMatch = window.location.href.match(/access_token=([^&]*)/);
         const expiresInMatch = window.location.href.match(/expires_in=([^&]*)/);
@@ -38,7 +44,6 @@ const Spotify = {
         }})
         .then(response => response.json())
         .then(jsonResponse => {
-            console.log(jsonResponse)
             if(!jsonResponse.tracks){
                 return [];
             }
