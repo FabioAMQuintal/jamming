@@ -1,4 +1,4 @@
-import dotenv from "dotenv/config.js";
+import 'dotenv/config'
 
 let accessToken;
 const clientId = process.env.ID;
