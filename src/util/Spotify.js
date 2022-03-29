@@ -7,7 +7,7 @@
 
 let accessToken;
 const clientId = '778c030e11cb46bd883d6aa5ab468a09'
-const redirectUri = 'http://localhost:3000/';
+const redirectUri = 'https://jamming-project-fabio.herokuapp.com/';
 
 const Spotify = {
 
