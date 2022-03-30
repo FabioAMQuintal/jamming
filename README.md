@@ -22,4 +22,5 @@
 
 ![5](https://media.giphy.com/media/hzeP3pwRB7HkEBPvnl/giphy.gif)
 
+***
 #### Note - This project is based on codecademy's fullstack course. 
